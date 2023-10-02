@@ -44,5 +44,10 @@ This Python QR Code Generator project allows you to easily generate QR codes for
 
 To generate a QR code, you can use the command-line interface (CLI). Here's a basic usage example:
 
+## Script
+
+python qr_code_generator.py
+
+
 ```shell
 python qr_code_generator.py --data "Your text or URL here"
