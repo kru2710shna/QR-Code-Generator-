@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center">Dashboard</h1>
+<p>Welcome, {{ current_user.username }}!</p>
+<div class="row">
+    <div class="col-md-6">
+        <h4>Your QR Codes:</h4>
+        <ul class="list-group">
+            {% for qr in current_user.qrcodes %}
+                <li class="list-group-item">
+                    <p>{{ qr.data }}</p>
+                    {% if qr.hashed_key %}
+                        <small class="text-muted">Secured</small>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

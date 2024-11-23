@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center">Generate Your QR Code</h1>
+<div class="card shadow p-4">
+    <form method="POST" action="{{ url_for('qr.generate') }}">
+        <div class="mb-3">
+            <label for="data" class="form-label">Enter Data:</label>
+            <textarea class="form-control" id="data" name="data" rows="4" placeholder="Enter your message or URL here" required></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="secure" name="secure">
+            <label class="form-check-label" for="secure">Make this QR Code secure</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Generate QR Code</button>
+    </form>
+</div>
+{% endblock %}

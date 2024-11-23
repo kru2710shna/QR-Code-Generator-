@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center">Enter Security Key</h1>
+<div class="card shadow p-4">
+    <form method="POST" action="{{ url_for('qr.view_secure') }}">
+        <div class="mb-3">
+            <label for="key" class="form-label">Security Key:</label>
+            <input type="password" class="form-control" id="key" name="key" placeholder="Enter the security key" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">View QR Code</button>
+    </form>
+</div>
+{% endblock %}
+
